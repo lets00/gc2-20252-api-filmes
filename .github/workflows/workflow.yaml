@@ -1,4 +1,4 @@
-name: Workflow principal
+name: workflow-principal
 run-name: wokflow principal sendo executado
 on:
   push:
