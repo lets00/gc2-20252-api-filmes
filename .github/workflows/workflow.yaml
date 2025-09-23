@@ -1,18 +1,20 @@
 name: main workflow
 run-name: workflow-principal sendo executado
+
 on: 
   push: 
+
 jobs: 
   executa-testes:
-  runs-on: ubuntu-latest
-  steps: 
-    - name: realiza o clone do repo e muda para a branch correta
-      uses: actions/checkout@v5
+    runs-on: ubuntu-latest
+    steps: 
+      - name: realiza o clone do repo e muda para a branch correta
+        uses: actions/checkout@v5
 
-    - name: instalar node
-      uses: actions/setup-node@v4
-      with: 
-        node-version: 22
+      - name: instalar node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: 22
 
-    - name: instalar as deoendecias de execução 
-      - run: npm install
+      - name: instalar as dependências de execução
+        run: npm install
