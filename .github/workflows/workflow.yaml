@@ -4,7 +4,7 @@ on:
   push:
 jobs:
   executa-testes:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Realiza o clone do repositorio e muda para a branch correta
         uses: actions/checkout@v5
