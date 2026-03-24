@@ -1,0 +1,23 @@
+name: Instala e checa a aplicação
+run-name: "Meu primeiro workflow"
+on: [push]
+jobs:
+  executa-testes:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar o repositório
+        uses: action/checkout@v4
+
+      - name: Instalar o NodeJS
+        uses: action/setup-node@v3
+        with:
+          node-version: 22
+       
+      - name: Instalar as dependencias
+        run: npm install
+      
+      - name: Instalar as dependencias de teste
+        run: npm install -D
+      
+      - name: Executar os testes
+        run: npm run test
